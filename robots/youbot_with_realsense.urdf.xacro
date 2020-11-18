@@ -71,9 +71,9 @@
   </xacro:camera_tower>
 
   <!-- 3D camera on tower -->
-  <xacro:_d435i name="tower_cam3d" parent="camera_tower_link" tilt="0.5">
+  <xacro:sensor_d435i name="tower_cam3d" parent="camera_tower_link">
     <origin xyz="0 0 0.49" rpy="0 0 0" />
-  </xacro:_d435i>
+  </xacro:sensor_d435i>
 
   
 </robot>
