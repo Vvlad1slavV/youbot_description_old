@@ -29,7 +29,7 @@
 
   <!-- sensors -->
   <xacro:include filename="$(find youbot_description)/urdf/sensors/hokuyo_urg04_laser.urdf.xacro"/>
-  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro"/>
 
   <!-- sensor tower -->
   <xacro:include filename="$(find youbot_description)/urdf/misc/camera_tower.urdf.xacro"/>
@@ -71,9 +71,9 @@
   </xacro:camera_tower>
 
   <!-- 3D camera on tower -->
-  <xacro:sensor_d435i name="tower_cam3d" parent="camera_tower_link">
-    <origin xyz="0 0 0.49" rpy="0 0 0" />
-  </xacro:sensor_d435i>
+  <xacro:sensor_d435 name="sensor_d435" parent="camera_tower_link" topics_ns="camera"> 
+    <origin xyz="0 0 0.49" rpy="0 0.5 0" />
+  </xacro:sensor_d435>
 
   
 </robot>
